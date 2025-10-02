@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviamasters | Инструкция и Ссылки</title>
+    <!-- Подключение Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение современного шрифта Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили и шрифт */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* Глубокий Фон: Насыщенный фиолетово-синий градиент */
+            background: linear-gradient(135deg, #100630 0%, #251055 50%, #100630 100%); 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            color: white; /* Основной текст белый */
+        }
+
+        /* Стиль для заголовков - Неоновое свечение */
+        .main-heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #FFFFFF;
+            /* Мягкое голубое неоновое свечение */
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.3); 
+        }
+
+        /* Стиль для градиентных кнопок */
+        .gradient-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+            color: white; 
+            font-weight: 800; /* Более жирный текст для читаемости */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            border: none; 
+            padding-top: 1.25rem; /* Немного больше отступа */
+            padding-bottom: 1.25rem;
+        }
+
+        /* Градиент 1: Играть в Telegram (НОВЫЙ - Насыщенный Синий) */
+        .gradient-1 {
+            /* Мягкий, но яркий градиент */
+            background-image: linear-gradient(to right, #007bff 0%, #00c6ff 100%); /* Насыщенный синий */
+            /* Неоновое, но мягкое свечение */
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.8), 0 0 10px rgba(0, 198, 255, 0.4); 
+        }
+        .gradient-1:hover {
+            transform: translateY(-3px) scale(1.03); /* Усиленный подъем */
+            box-shadow: 0 12px 30px rgba(0, 123, 255, 1); /* Более заметная тень при ховере */
+        }
+
+        /* Градиент 2: Telegram-канал | Конкурсы (Мягкий Неоновый Розовый) */
+        .gradient-2 {
+            /* Мягкий, но яркий градиент */
+            background-image: linear-gradient(to right, #FF45A6 0%, #FF8AD5 100%); /* Яркий Розовый/Фуксия */
+            /* Неоновое, но мягкое свечение */
+            box-shadow: 0 4px 20px rgba(255, 69, 166, 0.8), 0 0 10px rgba(255, 138, 213, 0.4);
+        }
+        .gradient-2:hover {
+            transform: translateY(-3px) scale(1.03); 
+            box-shadow: 0 12px 30px rgba(255, 69, 166, 1);
+        }
+
+        /* Стиль для контейнера видео */
+        .video-container {
+            position: relative;
+            width: 100%;
+            /* Фиксированная высота для мобильных устройств, чтобы избежать сдвигов */
+            height: auto; 
+            max-height: 300px; 
+            overflow: hidden;
+            border-radius: 1.5rem; 
+            /* Мягкая, глубокая тень */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); 
+            background-color: #110B30; 
+            /* Мягкая белая рамка */
+            border: 3px solid rgba(255, 255, 255, 0.2); 
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 1.2rem; 
+        }
+
+        /* Адаптивность для текста */
+        @media (max-width: 640px) {
+            .main-heading {
+                font-size: 2rem;
+            }
+            .gradient-button {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-size: 1rem;
+            }
+            /* Оптимизация расположения для мобильных устройств */
+            body {
+                padding: 1rem 0;
+            }
+            .w-full.max-w-lg {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w-full max-w-lg p-6 sm:p-8">
+        <!-- Блок Логотипа -->
+        <div class="flex justify-center mb-10">
+            <!-- Заглушка логотипа -->
+            <img 
+                src="avia.webp" 
+                alt="Логотип Aviamasters" 
+                class="w-24 h-24 rounded-full border-4 border-white/80 shadow-2xl transition duration-300 hover:scale-105"
+            >
+        </div>
+
+        <!-- Раздел ИНСТРУКЦИЯ -->
+        <h1 class="main-heading text-white text-center mb-8 uppercase">
+            ИНСТРУКЦИЯ
+        </h1>
+
+        <!-- Видео-плеер (Локальное видео) -->
+        <div class="video-container mx-auto max-w-md mb-12">
+            <!-- 
+                ВНИМАНИЕ: Для работы этого блока, пожалуйста, поместите 
+                файл вашего видео с именем 'instruction.mp4' в ту же папку, 
+                где находится этот HTML-файл. 
+            -->
+            <video 
+                controls 
+                poster="prev.jpg"
+            >
+                <source src="inst.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео HTML5.
+            </video>
+        </div>
+
+        <!-- Раздел ССЫЛКИ -->
+        <h2 class="main-heading text-white text-center mb-8 uppercase">
+            ССЫЛКИ
+        </h2>
+
+        <div class="space-y-6">
+            
+            <!-- Кнопка 1: Aviamasters - Играть в Telegram (НОВЫЙ - Насыщенный Синий) -->
+            <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVhdmlh" class="gradient-button gradient-1 flex items-center w-full rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-400/50">
+                <span class="flex-shrink-0 mr-4 ml-6">
+                    <!-- Заглушка для иконки "Играть" -->
+                    <img 
+                        src="avia.webp" 
+                        alt="Иконка Играть" 
+                        class="w-9 h-9 rounded-full shadow-md object-cover border-2 border-white"
+                    >
+                </span>
+                <span class="text-left flex-grow text-lg py-4 pr-6">
+                    Aviamasters - Играть в Telegram
+                </span>
+            </a>
+            
+            <!-- Кнопка 2: Telegram-канал | Конкурсы (Мягкий Неоновый Розовый) -->
+            <a href="https://t.me/+3P7lnRo07uI1ZTMy" class="gradient-button gradient-2 flex items-center w-full rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-pink-400/50">
+                <span class="flex-shrink-0 mr-4 ml-6">
+                    <!-- Заглушка для иконки "Приз" -->
+                    <img 
+                        src="logo1.jpg" 
+                        alt="Иконка Приза/Конкурса" 
+                        class="w-9 h-9 rounded-full shadow-md object-cover border-2 border-white"
+                    >
+                </span>
+                <span class="text-left flex-grow text-lg py-4 pr-6">
+                    Telegram-канал | Конкурсы
+                </span>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
