@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO: Улучшенный Title -->
-    <title>Aviamasters: Играть в Telegram | Инструкция Авиамастерс</title>
+    <title>Aviamasters: Играть в Telegram | Авиамастерс</title>
     
     <!-- SEO: Meta Description (показывается в результатах поиска) -->
     <meta name="description" content="Aviamasters. Авиамастерс - Играйте в Telegram, смотрите инструкцию и участвуйте в конкурсах. Быстрые ссылки и актуальная информация.">
@@ -15,7 +15,7 @@
     <meta property="og:description" content="Aviamasters. Играйте в Telegram, смотрите инструкцию и участвуйте в конкурсах.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://iimg.su/i/wgqkUG">
-    <meta property="og:url" content="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVhdmlh"> 
+    <meta property="og:url" content="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVhdmla"> 
 
      
     <!-- ДОБАВЛЕНИЕ ИКОНКИ САЙТА (FAVICON) -->
@@ -92,13 +92,12 @@
             box-shadow: 0 12px 30px rgba(255, 69, 166, 1);
         }
 
-        /* Стиль для контейнера видео */
-        .video-container {
+        /* Стиль для контейнера баннера */
+        .banner-container {
             position: relative;
             width: 100%;
-            /* Фиксированная высота для мобильных устройств, чтобы избежать сдвигов */
-            height: auto; 
-            max-height: 300px; 
+            height: auto;
+            max-height: 300px;
             overflow: hidden;
             border-radius: 1.5rem; 
             /* Мягкая, глубокая тень */
@@ -107,7 +106,7 @@
             /* Мягкая белая рамка */
             border: 3px solid rgba(255, 255, 255, 0.2); 
         }
-        .video-container video {
+        .banner-container img {
             width: 100%;
             height: auto;
             display: block;
@@ -147,25 +146,18 @@
             >
         </div>
 
-        <!-- Раздел ИНСТРУКЦИЯ -->
-        <h1 class="main-heading text-white text-center mb-8 uppercase">
-            ИНСТРУКЦИЯ
-        </h1>
-
-        <!-- Видео-плеер (Локальное видео) -->
-        <div class="video-container mx-auto max-w-md mb-12">
+       
+        <!-- Баннер (Заменил видео) -->
+        <div class="banner-container mx-auto max-w-md mb-12">
             <!-- 
                 ВНИМАНИЕ: Для работы этого блока, пожалуйста, поместите 
-                файл вашего видео с именем 'instruction.mp4' в ту же папку, 
+                файл вашего баннера с именем 'banner.png' в ту же папку, 
                 где находится этот HTML-файл. 
             -->
-            <video 
-                controls 
-                poster="prev.jpg"
+            <img 
+                src="banner.png" 
+                alt="Баннер Aviamasters"
             >
-                <source src="inst.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео HTML5.
-            </video>
         </div>
 
         <!-- Раздел ССЫЛКИ -->
