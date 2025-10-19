@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO: Улучшенный Title -->
     <title>Aviamasters: Играть в Telegram | Авиамастерс</title>
     
-    <!-- SEO: Meta Description (показывается в результатах поиска) -->
     <meta name="description" content="Aviamasters. Авиамастерс - Играйте в Telegram, смотрите инструкцию и участвуйте в конкурсах. Быстрые ссылки и актуальная информация.">
 
-    <!-- Open Graph (OG) Tags для отображения картинки при расшаривании (SEO/SMM) -->
-    <!-- ВАЖНО: Замените https://your-domain.com/social-image.jpg на URL вашей реальной картинки -->
     <meta property="og:title" content="Aviamasters: Играть в Telegram и Инструкция">
     <meta property="og:description" content="Aviamasters. Играйте в Telegram, смотрите инструкцию и участвуйте в конкурсах.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://iimg.su/i/wgqkUG">
     <meta property="og:url" content="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVhdmla"> 
 
-     
-    <!-- ДОБАВЛЕНИЕ ИКОНКИ САЙТА (FAVICON) -->
-    <!-- 1. Стандартный favicon (рекомендуется формат ICO или PNG 32x32) -->
-    <!-- ВАЖНО: Замените 'favicon.png' на путь к вашему файлу (например, 'images/favicon.png') -->
     <link rel="icon" type="image/png" href="game.png"> 
-    <!-- 2. Обработка старых браузеров (используется обычно .ico) -->
     <link rel="shortcut icon" href="favicon.ico">
 
-    <!-- Подключение Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Подключение современного шрифта Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         /* Общие стили и шрифт */
@@ -39,7 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2rem 0;
+            padding: 1rem 0; /* Уменьшаем вертикальный отступ на боди для мобильных */
             color: white; /* Основной текст белый */
         }
 
@@ -64,27 +53,23 @@
             font-weight: 800; /* Более жирный текст для читаемости */
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
             border: none; 
-            padding-top: 1.25rem; /* Немного больше отступа */
+            padding-top: 1.25rem; 
             padding-bottom: 1.25rem;
         }
 
-        /* Градиент 1: Играть в Telegram (НОВЫЙ - Насыщенный Синий) */
+        /* Градиент 1: Играть в Telegram */
         .gradient-1 {
-            /* Мягкий, но яркий градиент */
-            background-image: linear-gradient(to right, #007bff 0%, #00c6ff 100%); /* Насыщенный синий */
-            /* Неоновое, но мягкое свечение */
+            background-image: linear-gradient(to right, #007bff 0%, #00c6ff 100%);
             box-shadow: 0 4px 20px rgba(0, 123, 255, 0.8), 0 0 10px rgba(0, 198, 255, 0.4); 
         }
         .gradient-1:hover {
-            transform: translateY(-3px) scale(1.03); /* Усиленный подъем */
-            box-shadow: 0 12px 30px rgba(0, 123, 255, 1); /* Более заметная тень при ховере */
+            transform: translateY(-3px) scale(1.03); 
+            box-shadow: 0 12px 30px rgba(0, 123, 255, 1); 
         }
 
-        /* Градиент 2: Telegram-канал | Конкурсы (Мягкий Неоновый Розовый) */
+        /* Градиент 2: Telegram-канал | Конкурсы */
         .gradient-2 {
-            /* Мягкий, но яркий градиент */
-            background-image: linear-gradient(to right, #FF45A6 0%, #FF8AD5 100%); /* Яркий Розовый/Фуксия */
-            /* Неоновое, но мягкое свечение */
+            background-image: linear-gradient(to right, #FF45A6 0%, #FF8AD5 100%); 
             box-shadow: 0 4px 20px rgba(255, 69, 166, 0.8), 0 0 10px rgba(255, 138, 213, 0.4);
         }
         .gradient-2:hover {
@@ -97,47 +82,71 @@
             position: relative;
             width: 100%;
             height: auto;
-            max-height: 300px;
+            max-height: 250px; /* Немного уменьшим максимальную высоту на всех устройствах */
             overflow: hidden;
             border-radius: 1.5rem; 
-            /* Мягкая, глубокая тень */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); 
             background-color: #110B30; 
-            /* Убрана белая рамка */
         }
         .banner-container img {
             width: 100%;
             height: auto;
             display: block;
             border-radius: 1.2rem; 
+            object-fit: cover; /* Обеспечивает хорошее заполнение контейнера */
         }
-
-        /* Адаптивность для текста */
+        
+        /* Адаптивность для текста и отступов */
         @media (max-width: 640px) {
-            .main-heading {
-                font-size: 2rem;
-            }
-            .gradient-button {
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                font-size: 1rem;
-            }
-            /* Оптимизация расположения для мобильных устройств */
-            body {
-                padding: 1rem 0;
-            }
+            /* Контейнер */
             .w-full.max-w-lg {
-                padding: 1rem;
+                padding: 0 1rem; /* Уменьшаем горизонтальный паддинг контейнера на мобильных */
+                width: 100%;
+            }
+            
+            /* Заголовок */
+            .main-heading {
+                font-size: 1.75rem; /* Немного уменьшим размер заголовка */
+                margin-bottom: 1.5rem; /* Уменьшим отступ после заголовка */
+            }
+            
+            /* Логотип */
+            .flex.justify-center.mb-10 {
+                margin-bottom: 1.5rem; /* Уменьшим отступ под логотипом */
+            }
+
+            /* Баннер */
+            .banner-container {
+                max-height: 200px; /* Уменьшим максимальную высоту баннера еще больше на мобильных */
+                margin-bottom: 2rem; /* Уменьшим отступ под баннером */
+            }
+            
+            /* Кнопки */
+            .gradient-button {
+                padding-top: 0.9rem; /* Меньше вертикального отступа в кнопках */
+                padding-bottom: 0.9rem;
+                font-size: 1rem; /* Размер шрифта кнопки */
+                border-radius: 1rem; /* Чуть меньше радиус */
+            }
+            .gradient-button span.text-lg {
+                font-size: 1rem; /* Размер текста в кнопке */
+            }
+            .space-y-6 {
+                --tw-space-y-reverse: 0;
+                margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+                margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+                /* Уменьшаем вертикальный отступ между кнопками с 1.5rem (space-y-6) до 1.25rem */
+            }
+            .gradient-button .ml-6 {
+                margin-left: 1.25rem; /* Уменьшаем отступ для иконки */
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="w-full max-w-lg p-6 sm:p-8">
-        <!-- Блок Логотипа -->
-        <div class="flex justify-center mb-10">
-            <!-- Заглушка логотипа -->
+    <div class="w-full max-w-lg p-4 sm:p-8">
+        <div class="flex justify-center mb-6">
             <img 
                 src="avia.webp" 
                 alt="Логотип Aviamasters" 
@@ -145,55 +154,42 @@
             >
         </div>
 
-       
-        <!-- Баннер (Заменил видео) -->
-        <div class="banner-container mx-auto max-w-md mb-12">
-            <!-- 
-                ВНИМАНИЕ: Для работы этого блока, пожалуйста, поместите 
-                файл вашего баннера с именем 'banner.png' в ту же папку, 
-                где находится этот HTML-файл. 
-            -->
+        
+        <div class="banner-container mx-auto max-w-md mb-8">
             <img 
                 src="banner.png" 
                 alt="Баннер Aviamasters"
             >
         </div>
 
-        <!-- Раздел ССЫЛКИ -->
-        <h2 class="main-heading text-white text-center mb-8 uppercase">
+        <h2 class="main-heading text-white text-center mb-6 uppercase">
             ССЫЛКИ
         </h2>
 
-        <div class="space-y-6">
+        <div class="space-y-5">
             
-            <!-- Кнопка 1: Aviamasters - Играть в Telegram (НОВЫЙ - Насыщенный Синий) -->
-            <!-- Замените 'https://t.me/your_game_link' на вашу реальную ссылку для игры -->
             <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVhdmlh" class="gradient-button gradient-1 flex items-center w-full rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-400/50">
-                <span class="flex-shrink-0 mr-4 ml-6">
-                    <!-- Заглушка для иконки "Играть" -->
+                <span class="flex-shrink-0 mr-4 ml-5 sm:ml-6">
                     <img 
                         src="avia.webp" 
                         alt="Иконка Играть" 
                         class="w-9 h-9 rounded-full shadow-md object-cover border-2 border-white"
                     >
                 </span>
-                <span class="text-left flex-grow text-lg py-4 pr-6">
+                <span class="text-left flex-grow text-lg py-3 sm:py-4 pr-6">
                     Aviamasters - Играть в Telegram
                 </span>
             </a>
             
-            <!-- Кнопка 2: Telegram-канал | Конкурсы (Мягкий Неоновый Розовый) -->
-            <!-- Замените 'https://t.me/your_channel_link' на ссылку вашего Telegram-канала -->
             <a href="https://t.me/+3P7lnRo07uI1ZTMy" class="gradient-button gradient-2 flex items-center w-full rounded-2xl shadow-xl focus:outline-none focus:ring-4 focus:ring-pink-400/50">
-                <span class="flex-shrink-0 mr-4 ml-6">
-                    <!-- Заглушка для иконки "Приз" -->
+                <span class="flex-shrink-0 mr-4 ml-5 sm:ml-6">
                     <img 
                         src="logo1.jpg" 
                         alt="Иконка Приза/Конкурса" 
                         class="w-9 h-9 rounded-full shadow-md object-cover border-2 border-white"
                     >
                 </span>
-                <span class="text-left flex-grow text-lg py-4 pr-6">
+                <span class="text-left flex-grow text-lg py-3 sm:py-4 pr-6">
                     Telegram-канал | Конкурсы
                 </span>
             </a>
